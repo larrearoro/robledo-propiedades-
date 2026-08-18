@@ -421,7 +421,181 @@ nav {
 margin-left: auto;
 }
 
+/* =========================
+PÁGINA DE PROPIEDADES
+========================= */
 
+.titulo-propiedades {
+text-align: center;
+
+padding: 70px 20px 40px;
+}
+
+
+.titulo-propiedades h1 {
+color: #5b1018;
+
+font-size: 42px;
+
+margin-bottom: 10px;
+}
+
+
+.titulo-propiedades p {
+color: #666666;
+
+font-size: 18px;
+}
+
+
+
+.filtros {
+width: 90%;
+max-width: 1200px;
+
+margin: 0 auto 70px;
+
+padding: 35px;
+
+background-color: #ffffff;
+
+border-radius: 12px;
+
+box-shadow:
+0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+.filtros h2 {
+color: #5b1018;
+
+margin-bottom: 25px;
+
+text-align: center;
+}
+
+
+.filtros-grid {
+display: grid;
+
+grid-template-columns:
+repeat(4, 1fr);
+
+gap: 18px;
+}
+
+
+.filtros .campo {
+display: flex;
+
+flex-direction: column;
+
+gap: 6px;
+}
+
+
+.filtros .campo label {
+font-size: 14px;
+
+font-weight: bold;
+
+color: #555555;
+}
+
+
+.filtros .campo input,
+.filtros .campo select {
+width: 100%;
+
+height: 45px;
+
+padding: 0 12px;
+
+border: 1px solid #dddddd;
+
+border-radius: 5px;
+
+background-color: white;
+
+font-size: 14px;
+}
+
+
+.filtros > .btn-buscar {
+display: block;
+
+margin: 25px auto 0;
+
+padding: 13px 30px;
+
+border: none;
+
+border-radius: 6px;
+
+background-color: #a51c2b;
+
+color: white;
+
+font-weight: bold;
+
+cursor: pointer;
+}
+
+
+
+.resultados {
+width: 90%;
+max-width: 1200px;
+
+margin: 0 auto 80px;
+}
+
+
+.resultados-titulo {
+margin-bottom: 30px;
+}
+
+
+.resultados-titulo h2 {
+color: #5b1018;
+
+font-size: 30px;
+}
+
+
+.resultados-titulo p {
+color: #666666;
+}
+
+
+.contenido-propiedad {
+padding: 20px;
+}
+
+
+.contenido-propiedad .tipo {
+color: #a51c2b;
+
+font-size: 13px;
+
+font-weight: bold;
+
+text-transform: uppercase;
+}
+
+
+.contenido-propiedad h3 {
+color: #5b1018;
+
+margin: 8px 0;
+}
+
+
+.contenido-propiedad .ubicacion {
+color: #555555;
+
+margin-bottom: 10px;
+}
 
 /* =========================
 CELULARES
