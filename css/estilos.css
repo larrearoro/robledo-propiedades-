@@ -1,112 +1,458 @@
-:root {
-    --bordo: #6d0f1b;
-    --rojo: #a71930;
-    --blanco: #ffffff;
-    --gris: #f5f5f5;
-    --negro: #222222;
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
-    font-family: Arial, sans-serif;
-    background: var(--blanco);
-    color: var(--negro);
+font-family: Arial, Helvetica, sans-serif;
+background-color: #ffffff;
+color: #333333;
+line-height: 1.6;
 }
+
+
+
+/* =========================
+ENCABEZADO
+========================= */
 
 header {
-    background: var(--bordo);
-    color: white;
-    padding: 20px 40px;
+background-color: #ffffff;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 18px 6%;
+
+border-bottom: 1px solid #eeeeee;
 }
+
 
 header img {
-    width: 110px;
-    height: auto;
-    display: block;
+width: 110px;
+height: auto;
+display: block;
 }
+
 
 nav {
-    display: flex;
-    gap: 20px;
+display: flex;
+gap: 30px;
 }
+
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+text-decoration: none;
+color: #5b1018;
+
+font-weight: 600;
+
+transition: 0.3s;
 }
+
 
 nav a:hover {
-    color: #f0c0c5;
+color: #a51c2b;
 }
+
+
+
+/* =========================
+PORTADA
+========================= */
 
 .hero {
-    min-height: 500px;
+background: linear-gradient(
+rgba(91, 16, 24, 0.88),
+rgba(91, 16, 24, 0.88)
+);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+color: white;
 
-    text-align: center;
+text-align: center;
 
-    background: var(--gris);
-
-    padding: 40px;
+padding: 100px 20px;
 }
+
 
 .hero h2 {
-    color: var(--bordo);
-    font-size: 48px;
-    margin-bottom: 20px;
+font-size: 48px;
+
+max-width: 800px;
+
+margin: 0 auto 25px;
 }
+
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+max-width: 800px;
+
+margin: 0 auto 18px;
+
+font-size: 18px;
 }
+
 
 .btn {
-    display: inline-block;
+display: inline-block;
 
-    background: var(--rojo);
-    color: white;
+margin-top: 25px;
 
-    padding: 14px 28px;
+padding: 13px 28px;
 
-    border-radius: 6px;
+background-color: #a51c2b;
 
-    text-decoration: none;
-    font-weight: bold;
+color: white;
+
+text-decoration: none;
+
+border-radius: 6px;
+
+font-weight: bold;
+
+transition: 0.3s;
 }
+
 
 .btn:hover {
-    background: var(--bordo);
+background-color: #7d121e;
 }
 
-section {
-    padding: 60px 30px;
+
+
+/* =========================
+BUSCADOR
+========================= */
+
+.buscador {
+max-width: 1100px;
+
+margin: -45px auto 70px;
+
+background-color: white;
+
+padding: 35px;
+
+border-radius: 12px;
+
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+position: relative;
 }
 
-section h2 {
-    color: var(--bordo);
-    margin-bottom: 25px;
+
+.buscador h2 {
+color: #5b1018;
+
+margin-bottom: 20px;
+
+text-align: center;
 }
+
+
+.buscador-opciones {
+display: flex;
+
+justify-content: center;
+
+gap: 10px;
+
+margin-bottom: 25px;
+}
+
+
+.buscador-opciones button {
+padding: 10px 30px;
+
+border: 1px solid #5b1018;
+
+background-color: white;
+
+color: #5b1018;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+font-weight: bold;
+}
+
+
+.buscador-opciones button:hover {
+background-color: #5b1018;
+
+color: white;
+}
+
+
+.buscador-form {
+display: grid;
+
+grid-template-columns:
+1fr
+1fr
+1fr
+auto;
+
+gap: 15px;
+
+align-items: end;
+}
+
+
+.campo {
+display: flex;
+
+flex-direction: column;
+
+gap: 6px;
+}
+
+
+.campo label {
+font-size: 14px;
+
+font-weight: bold;
+
+color: #555555;
+}
+
+
+.campo input,
+.campo select {
+height: 45px;
+
+padding: 0 12px;
+
+border: 1px solid #dddddd;
+
+border-radius: 5px;
+
+background-color: white;
+
+font-size: 14px;
+}
+
+
+.btn-buscar {
+height: 45px;
+
+padding: 0 22px;
+
+border: none;
+
+border-radius: 5px;
+
+background-color: #a51c2b;
+
+color: white;
+
+font-weight: bold;
+
+cursor: pointer;
+}
+
+
+.btn-buscar:hover {
+background-color: #7d121e;
+}
+
+
+
+/* =========================
+PROPIEDADES DESTACADAS
+========================= */
+
+.destacadas {
+max-width: 1100px;
+
+margin: 0 auto 80px;
+
+padding: 0 20px;
+
+text-align: center;
+}
+
+
+.destacadas h2 {
+color: #5b1018;
+
+font-size: 32px;
+
+margin-bottom: 10px;
+}
+
+
+.destacadas > p {
+margin-bottom: 35px;
+
+color: #666666;
+}
+
+
+.propiedades-grid {
+display: grid;
+
+grid-template-columns:
+repeat(3, 1fr);
+
+gap: 25px;
+}
+
+
+.propiedad-card {
+background-color: white;
+
+border-radius: 10px;
+
+overflow: hidden;
+
+box-shadow:
+0 4px 20px rgba(0, 0, 0, 0.08);
+
+text-align: left;
+}
+
+
+.imagen-propiedad {
+height: 200px;
+
+background-color: #eeeeee;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+color: #888888;
+}
+
+
+.propiedad-card h3 {
+padding: 20px 20px 5px;
+
+color: #5b1018;
+}
+
+
+.propiedad-card p {
+padding: 0 20px 20px;
+
+color: #666666;
+}
+
+
+
+/* =========================
+SOBRE NOSOTROS
+========================= */
+
+.sobre-nosotros {
+background-color: #f8f5f5;
+
+text-align: center;
+
+padding: 80px 20px;
+}
+
+
+.sobre-nosotros h2 {
+color: #5b1018;
+
+font-size: 32px;
+
+margin-bottom: 20px;
+}
+
+
+.sobre-nosotros p {
+max-width: 750px;
+
+margin: 0 auto;
+
+color: #555555;
+
+font-size: 17px;
+}
+
+
+
+/* =========================
+PIE DE PÁGINA
+========================= */
 
 footer {
-    background: var(--bordo);
-    color: white;
+background-color: #5b1018;
 
-    padding: 40px;
+color: white;
 
-    text-align: center;
+text-align: center;
+
+padding: 40px 20px;
+}
+
+
+footer h3 {
+margin-bottom: 10px;
+}
+
+
+footer p {
+margin: 5px 0;
+
+opacity: 0.9;
+}
+
+
+
+/* =========================
+CELULARES
+========================= */
+
+@media (max-width: 800px) {
+
+header {
+flex-direction: column;
+
+gap: 20px;
+}
+
+
+nav {
+gap: 18px;
+
+flex-wrap: wrap;
+
+justify-content: center;
+}
+
+
+.hero {
+padding: 70px 20px;
+}
+
+
+.hero h2 {
+font-size: 36px;
+}
+
+
+.buscador {
+margin: 30px 15px 60px;
+}
+
+
+.buscador-form {
+grid-template-columns: 1fr;
+}
+
+
+.propiedades-grid {
+grid-template-columns: 1fr;
+}
+
 }
