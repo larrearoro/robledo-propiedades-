@@ -1,23 +1,428 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
+<section class="filtros">
 
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>
+Buscá tu propiedad
+</h2>
 
-    <title>Propiedades | Robledo Propiedades</title>
 
-</head>
+<div class="filtros-grid">
 
-<body>
 
-    <h1>Propiedades</h1>
+<div class="campo">
 
-    <a href="index.html">
-        Volver al inicio
-    </a>
+<label for="operacion">
+Operación
+</label>
+
+<select id="operacion">
+
+<option>
+Comprar o alquilar
+</option>
+
+<option>
+Comprar
+</option>
+
+<option>
+Alquilar
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="tipo-propiedad">
+Tipo de propiedad
+</label>
+
+<select id="tipo-propiedad">
+
+<option>
+Todos
+</option>
+
+<option>
+Casa
+</option>
+
+<option>
+Departamento
+</option>
+
+<option>
+PH
+</option>
+
+<option>
+Terreno
+</option>
+
+<option>
+Local
+</option>
+
+<option>
+Oficina
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="ubicacion-propiedad">
+Ubicación
+</label>
+
+<input
+type="text"
+id="ubicacion-propiedad"
+placeholder="Ej. La Plata"
+>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="precio-minimo">
+Precio mínimo
+</label>
+
+<input
+type="number"
+id="precio-minimo"
+placeholder="Desde"
+>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="precio-maximo">
+Precio máximo
+</label>
+
+<input
+type="number"
+id="precio-maximo"
+placeholder="Hasta"
+>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="dormitorios">
+Dormitorios
+</label>
+
+<select id="dormitorios">
+
+<option>
+Cualquier cantidad
+</option>
+
+<option>
+1+
+</option>
+
+<option>
+2+
+</option>
+
+<option>
+3+
+</option>
+
+<option>
+4+
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="banos">
+Baños
+</label>
+
+<select id="banos">
+
+<option>
+Cualquier cantidad
+</option>
+
+<option>
+1+
+</option>
+
+<option>
+2+
+</option>
+
+<option>
+3+
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="campo">
+
+<label for="cochera">
+Cochera
+</label>
+
+<select id="cochera">
+
+<option>
+Indistinto
+</option>
+
+<option>
+Sí
+</option>
+
+<option>
+No
+</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+<button
+type="button"
+class="btn-buscar"
+>
+Buscar propiedades
+</button>
+
+
+</section>
+
+
+
+<!-- RESULTADOS -->
+
+<section class="resultados">
+
+
+<div class="resultados-titulo">
+
+<h2>
+Propiedades disponibles
+</h2>
+
+<p>
+Encontrá opciones que se adapten a vos.
+</p>
+
+</div>
+
+
+
+<div class="propiedades-grid">
+
+
+<!-- PROPIEDAD 1 -->
+
+<article class="propiedad-card">
+
+
+<div class="imagen-propiedad">
+Foto de propiedad
+</div>
+
+
+<div class="contenido-propiedad">
+
+
+<span class="tipo">
+En venta
+</span>
+
+
+<h3>
+Propiedad destacada
+</h3>
+
+
+<p class="ubicacion">
+📍 La Plata
+</p>
+
+
+<p>
+Información de la propiedad.
+</p>
+
+
+<a
+href="propiedad.html"
+class="btn"
+>
+Ver propiedad
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- PROPIEDAD 2 -->
+
+<article class="propiedad-card">
+
+
+<div class="imagen-propiedad">
+Foto de propiedad
+</div>
+
+
+<div class="contenido-propiedad">
+
+
+<span class="tipo">
+En alquiler
+</span>
+
+
+<h3>
+Propiedad destacada
+</h3>
+
+
+<p class="ubicacion">
+📍 La Plata
+</p>
+
+
+<p>
+Información de la propiedad.
+</p>
+
+
+<a
+href="propiedad.html"
+class="btn"
+>
+Ver propiedad
+</a>
+
+
+</div>
+
+
+</article>
+
+
+
+<!-- PROPIEDAD 3 -->
+
+<article class="propiedad-card">
+
+
+<div class="imagen-propiedad">
+Foto de propiedad
+</div>
+
+
+<div class="contenido-propiedad">
+
+
+<span class="tipo">
+En venta
+</span>
+
+
+<h3>
+Propiedad destacada
+</h3>
+
+
+<p class="ubicacion">
+📍 La Plata
+</p>
+
+
+<p>
+Información de la propiedad.
+</p>
+
+
+<a
+href="propiedad.html"
+class="btn"
+>
+Ver propiedad
+</a>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+<h3>
+Robledo Propiedades
+</h3>
+
+<p>
+Compra · Venta · Alquiler
+</p>
+
+<p>
+Todos los derechos reservados.
+</p>
+
+</footer>
+
 
 </body>
 
