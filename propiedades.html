@@ -1,14 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Propiedades | Robledo Propiedades</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" alt="Robledo Propiedades">
+
+<nav>
+
+<a href="index.html">Inicio</a>
+
+<a href="propiedades.html">Propiedades</a>
+
+<a href="nosotros.html">Nosotros</a>
+
+<a href="contacto.html">Contacto</a>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="titulo-propiedades">
+
+<h1>
+Propiedades
+</h1>
+
+<p>
+Encontrá la propiedad que estás buscando.
+</p>
+
+</section>
+
 
 <section class="filtros">
-
 
 <h2>
 Buscá tu propiedad
 </h2>
 
-
 <div class="filtros-grid">
-
 
 <div class="campo">
 
@@ -18,22 +65,13 @@ Operación
 
 <select id="operacion">
 
-<option>
-Comprar o alquilar
-</option>
-
-<option>
-Comprar
-</option>
-
-<option>
-Alquilar
-</option>
+<option>Comprar o alquilar</option>
+<option>Comprar</option>
+<option>Alquilar</option>
 
 </select>
 
 </div>
-
 
 
 <div class="campo">
@@ -44,38 +82,17 @@ Tipo de propiedad
 
 <select id="tipo-propiedad">
 
-<option>
-Todos
-</option>
-
-<option>
-Casa
-</option>
-
-<option>
-Departamento
-</option>
-
-<option>
-PH
-</option>
-
-<option>
-Terreno
-</option>
-
-<option>
-Local
-</option>
-
-<option>
-Oficina
-</option>
+<option>Todos</option>
+<option>Casa</option>
+<option>Departamento</option>
+<option>PH</option>
+<option>Terreno</option>
+<option>Local</option>
+<option>Oficina</option>
 
 </select>
 
 </div>
-
 
 
 <div class="campo">
@@ -93,7 +110,6 @@ placeholder="Ej. La Plata"
 </div>
 
 
-
 <div class="campo">
 
 <label for="precio-minimo">
@@ -107,7 +123,6 @@ placeholder="Desde"
 >
 
 </div>
-
 
 
 <div class="campo">
@@ -125,7 +140,6 @@ placeholder="Hasta"
 </div>
 
 
-
 <div class="campo">
 
 <label for="dormitorios">
@@ -134,30 +148,15 @@ Dormitorios
 
 <select id="dormitorios">
 
-<option>
-Cualquier cantidad
-</option>
-
-<option>
-1+
-</option>
-
-<option>
-2+
-</option>
-
-<option>
-3+
-</option>
-
-<option>
-4+
-</option>
+<option>Cualquier cantidad</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
+<option>4+</option>
 
 </select>
 
 </div>
-
 
 
 <div class="campo">
@@ -168,26 +167,14 @@ Baños
 
 <select id="banos">
 
-<option>
-Cualquier cantidad
-</option>
-
-<option>
-1+
-</option>
-
-<option>
-2+
-</option>
-
-<option>
-3+
-</option>
+<option>Cualquier cantidad</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
 
 </select>
 
 </div>
-
 
 
 <div class="campo">
@@ -198,22 +185,13 @@ Cochera
 
 <select id="cochera">
 
-<option>
-Indistinto
-</option>
-
-<option>
-Sí
-</option>
-
-<option>
-No
-</option>
+<option>Indistinto</option>
+<option>Sí</option>
+<option>No</option>
 
 </select>
 
 </div>
-
 
 </div>
 
@@ -225,15 +203,10 @@ class="btn-buscar"
 Buscar propiedades
 </button>
 
-
 </section>
 
 
-
-<!-- RESULTADOS -->
-
 <section class="resultados">
-
 
 <div class="resultados-titulo">
 
@@ -248,42 +221,31 @@ Encontrá opciones que se adapten a vos.
 </div>
 
 
-
 <div class="propiedades-grid">
 
-
-<!-- PROPIEDAD 1 -->
-
 <article class="propiedad-card">
-
 
 <div class="imagen-propiedad">
 Foto de propiedad
 </div>
 
-
 <div class="contenido-propiedad">
-
 
 <span class="tipo">
 En venta
 </span>
 
-
 <h3>
 Propiedad destacada
 </h3>
-
 
 <p class="ubicacion">
 📍 La Plata
 </p>
 
-
 <p>
 Información de la propiedad.
 </p>
-
 
 <a
 href="propiedad.html"
@@ -292,46 +254,34 @@ class="btn"
 Ver propiedad
 </a>
 
-
 </div>
-
 
 </article>
 
 
-
-<!-- PROPIEDAD 2 -->
-
 <article class="propiedad-card">
-
 
 <div class="imagen-propiedad">
 Foto de propiedad
 </div>
 
-
 <div class="contenido-propiedad">
-
 
 <span class="tipo">
 En alquiler
 </span>
 
-
 <h3>
 Propiedad destacada
 </h3>
-
 
 <p class="ubicacion">
 📍 La Plata
 </p>
 
-
 <p>
 Información de la propiedad.
 </p>
-
 
 <a
 href="propiedad.html"
@@ -340,46 +290,34 @@ class="btn"
 Ver propiedad
 </a>
 
-
 </div>
-
 
 </article>
 
 
-
-<!-- PROPIEDAD 3 -->
-
 <article class="propiedad-card">
-
 
 <div class="imagen-propiedad">
 Foto de propiedad
 </div>
 
-
 <div class="contenido-propiedad">
-
 
 <span class="tipo">
 En venta
 </span>
 
-
 <h3>
 Propiedad destacada
 </h3>
-
 
 <p class="ubicacion">
 📍 La Plata
 </p>
 
-
 <p>
 Información de la propiedad.
 </p>
-
 
 <a
 href="propiedad.html"
@@ -388,24 +326,16 @@ class="btn"
 Ver propiedad
 </a>
 
-
 </div>
-
 
 </article>
 
-
 </div>
-
 
 </section>
 
-
 </main>
 
-
-
-<!-- PIE DE PÁGINA -->
 
 <footer>
 
@@ -422,7 +352,6 @@ Todos los derechos reservados.
 </p>
 
 </footer>
-
 
 </body>
 
