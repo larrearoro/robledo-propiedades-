@@ -1,5 +1,5 @@
 async function cargarPropiedades() {
-const { data, error } = await supabase
+const { data, error } = await supabaseClient
 .from("propiedades")
 .select("*")
 .order("created_at", { ascending: false });
