@@ -35,6 +35,10 @@ ${propiedad.titulo}
 📍 ${propiedad.ubicacion}
 </p>
 
+<p class="precio">
+US$ ${Number(propiedad.precio).toLocaleString("es-AR")}
+</p>
+
 <p>
 ${propiedad.descripcion}
 </p>
