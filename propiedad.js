@@ -25,7 +25,7 @@ document.querySelector(".info-propiedad h1").textContent =
 propiedad["titulo"];
 
 document.querySelector(".precio").textContent =
-propiedad.precio;
+"US$ " + propiedad.precio;
 
 document.querySelector(".ubicacion").textContent =
 "📍 " + propiedad.ubicacion;
@@ -43,7 +43,7 @@ caracteristicas[2].querySelector("strong").textContent =
 propiedad.superficie + " m²";
 
 caracteristicas[3].querySelector("strong").textContent =
-propiedad.cochera;
+propiedad.cochera ? "Sí" : "No";
 
 const fotoPrincipal =
 document.querySelector(".foto-principal");
