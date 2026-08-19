@@ -51,6 +51,20 @@ document.querySelector(".foto-principal");
 fotoPrincipal.innerHTML = `
 <img src="${propiedad.image_url}" alt="${propiedad.titulo}">
 `;
+const fotosSecundarias =
+document.querySelectorAll(".fotos-secundarias div");
+
+fotosSecundarias[0].innerHTML = `
+<img src="${propiedad.image_url_2}" alt="${propiedad.titulo}">
+`;
+
+fotosSecundarias[1].innerHTML = `
+<img src="${propiedad.image_url_3}" alt="${propiedad.titulo}">
+`;
+
+fotosSecundarias[2].innerHTML = `
+<img src="${propiedad.image_url_4}" alt="${propiedad.titulo}">
+`;
 const descripcion = document.querySelector(".descripcion-propiedad");
 
 descripcion.querySelector("p").textContent =
