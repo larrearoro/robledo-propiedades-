@@ -14,6 +14,7 @@ return;
 container.innerHTML = "";
 
 data.forEach(function (propiedad) {
+  console.log("PROPIEDAD:", propiedad);
 container.innerHTML += `
 <article class="propiedad-card">
 
