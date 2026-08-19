@@ -51,6 +51,10 @@ document.querySelector(".foto-principal");
 fotoPrincipal.innerHTML = `
 <img src="${propiedad.image_url}" alt="${propiedad.titulo}">
 `;
+const descripcion = document.querySelector(".descripcion-propiedad");
+
+descripcion.querySelector("p").textContent =
+propiedad.descripcion;
 }
 
 cargarPropiedad();
