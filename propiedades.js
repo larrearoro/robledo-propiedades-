@@ -13,12 +13,10 @@ return;
 
 container.innerHTML = "";
 
-data.forEach((propiedad) => {
-const tarjeta = document.createElement("article");
+data.forEach(function (propiedad) {
+container.innerHTML += `
+<article class="propiedad-card">
 
-tarjeta.className = "propiedad-card";
-
-tarjeta.innerHTML = `
 <div class="imagen-propiedad">
 Foto de propiedad
 </div>
@@ -49,9 +47,9 @@ Ver propiedad
 </a>
 
 </div>
-`;
 
-container.appendChild(tarjeta);
+</article>
+`;
 });
 }
 
