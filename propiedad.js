@@ -22,7 +22,7 @@ return;
 console.log("PROPIEDAD:", propiedad);
 
 document.querySelector(".info-propiedad h1").textContent =
-propiedad.titulo;
+propiedad["titulo"];
 
 document.querySelector(".precio").textContent =
 propiedad.precio;
