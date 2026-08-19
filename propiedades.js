@@ -18,7 +18,7 @@ container.innerHTML += `
 <article class="propiedad-card">
 
 <div class="imagen-propiedad">
-Foto de propiedad
+<img src="${propiedad.imagen_url}" alt="${propiedad.titulo}">
 </div>
 
 <div class="contenido-propiedad">
