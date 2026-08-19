@@ -65,6 +65,20 @@ fotosSecundarias[1].innerHTML = `
 fotosSecundarias[2].innerHTML = `
 <img src="${propiedad.image_url_4}" alt="${propiedad.titulo}">
 `;
+  const mapa = L.map("mapa").setView(
+[propiedad.latitud, propiedad.longitud],
+15
+);
+
+L.tileLayer(
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+{
+attribution: "&copy; OpenStreetMap contributors"
+}
+).addTo(mapa);
+
+L.marker([propiedad.latitud, propiedad.longitud])
+.addTo(mapa);
 const descripcion = document.querySelector(".descripcion-propiedad");
 
 descripcion.querySelector("p").textContent =
