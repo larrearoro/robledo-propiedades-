@@ -48,3 +48,40 @@ Ver propiedad
 }
 
 cargarDestacadas();
+
+let operacionInicio = "";
+
+document.getElementById("btn-comprar").addEventListener("click", function () {
+operacionInicio = "Venta";
+});
+
+document.getElementById("btn-alquilar").addEventListener("click", function () {
+operacionInicio = "Alquiler";
+});
+
+document.getElementById("btn-buscar-inicio").addEventListener("click", function () {
+
+const tipo = document.getElementById("tipo").value;
+const ubicacion = document.getElementById("ubicacion").value.trim();
+const precio = document.getElementById("precio").value;
+
+const parametros = new URLSearchParams();
+
+if (operacionInicio) {
+parametros.set("operacion", operacionInicio);
+}
+
+if (tipo !== "Cualquier tipo") {
+parametros.set("tipo", tipo);
+}
+
+if (ubicacion) {
+parametros.set("ubicacion", ubicacion);
+}
+
+if (precio) {
+parametros.set("precioMaximo", precio);
+}
+
+window.location.href = `propiedades.html?${parametros.toString()}`;
+});
