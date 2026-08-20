@@ -1325,3 +1325,44 @@ grid-column: auto;
 }
 
 }
+
+/* TARJETAS DE CONTACTO */
+
+.contacto-grid {
+max-width: 1000px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.contacto-card {
+background: white;
+padding: 30px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-card h2 {
+margin-top: 0;
+margin-bottom: 25px;
+}
+
+.contacto-card p {
+margin: 15px 0;
+line-height: 1.5;
+}
+
+.contacto-card a {
+text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+.contacto-grid {
+grid-template-columns: 1fr;
+max-width: 500px;
+}
+
+}
