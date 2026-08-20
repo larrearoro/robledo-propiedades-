@@ -1440,3 +1440,35 @@ min-height: auto;
 }
 
 }
+
+/* =========================
+FONDO DE CONTACTO
+========================= */
+
+body:has(.titulo-contacto) {
+background-color: #f8f5f5;
+}
+
+.titulo-contacto {
+padding-bottom: 30px;
+}
+
+.titulo-contacto h1 {
+color: #5b1018;
+font-size: 42px;
+}
+
+.contacto-card {
+background-color: #ffffff;
+border: none;
+border-top: 4px solid #5b1018;
+box-shadow: 0 8px 25px rgba(91, 16, 24, 0.10);
+}
+
+.contacto-card h2 {
+color: #5b1018;
+}
+
+.contacto-card p {
+color: #555555;
+}
