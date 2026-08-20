@@ -1265,3 +1265,63 @@ height: 400px;
 border-radius: 10px;
 overflow: hidden;
 }
+
+/* =========================
+PÁGINA DE CONTACTO
+========================= */
+
+.titulo-contacto {
+text-align: center;
+padding: 70px 20px 40px;
+}
+
+.titulo-contacto h1 {
+margin-bottom: 10px;
+}
+
+.titulo-contacto p {
+margin: 0;
+}
+
+.contacto {
+padding: 20px 20px 80px;
+}
+
+.contacto-info {
+max-width: 900px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.contacto-info h2 {
+grid-column: 1 / -1;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.contacto-info h3 {
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+.contacto-info p {
+margin: 10px 0;
+}
+
+.contacto-info a {
+text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+.contacto-info {
+grid-template-columns: 1fr;
+}
+
+.contacto-info h2 {
+grid-column: auto;
+}
+
+}
