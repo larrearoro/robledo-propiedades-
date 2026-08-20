@@ -1270,112 +1270,30 @@ overflow: hidden;
 PÁGINA DE CONTACTO
 ========================= */
 
+.pagina-contacto {
+background-color: #f8f5f5;
+}
+
 .titulo-contacto {
 text-align: center;
 padding: 70px 20px 40px;
 }
 
 .titulo-contacto h1 {
+color: #5b1018;
+font-size: 42px;
 margin-bottom: 10px;
 }
 
 .titulo-contacto p {
-margin: 0;
+color: #666666;
+font-size: 18px;
 }
-
-.contacto {
-padding: 20px 20px 80px;
-}
-
-.contacto-info {
-max-width: 900px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-}
-
-.contacto-info h2 {
-grid-column: 1 / -1;
-text-align: center;
-margin-bottom: 10px;
-}
-
-.contacto-info h3 {
-margin-top: 0;
-margin-bottom: 15px;
-}
-
-.contacto-info p {
-margin: 10px 0;
-}
-
-.contacto-info a {
-text-decoration: none;
-}
-
-@media (max-width: 800px) {
-
-.contacto-info {
-grid-template-columns: 1fr;
-}
-
-.contacto-info h2 {
-grid-column: auto;
-}
-
-}
-
-/* TARJETAS DE CONTACTO */
-
-.contacto-grid {
-max-width: 1000px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-}
-
-.contacto-card {
-background: white;
-padding: 30px;
-border-radius: 12px;
-text-align: center;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.contacto-card h2 {
-margin-top: 0;
-margin-bottom: 25px;
-}
-
-.contacto-card p {
-margin: 15px 0;
-line-height: 1.5;
-}
-
-.contacto-card a {
-text-decoration: none;
-}
-
-@media (max-width: 800px) {
-
-.contacto-grid {
-grid-template-columns: 1fr;
-max-width: 500px;
-}
-
-}
-
-/* =========================
-CONTACTO - DISEÑO FINAL
-========================= */
 
 .contacto {
 width: 90%;
 max-width: 1100px;
 margin: 0 auto 80px;
-padding: 40px 0;
 }
 
 .contacto-grid {
@@ -1385,18 +1303,12 @@ gap: 30px;
 }
 
 .contacto-card {
-background-color: #f8f5f5;
-border: 1px solid #eadede;
-border-radius: 14px;
+background-color: #ffffff;
+border-top: 5px solid #5b1018;
+border-radius: 12px;
 padding: 35px 25px;
 text-align: center;
-min-height: 260px;
-
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-
-box-shadow: 0 6px 20px rgba(91, 16, 24, 0.08);
+box-shadow: 0 6px 20px rgba(91, 16, 24, 0.10);
 }
 
 .contacto-card h2 {
@@ -1407,7 +1319,7 @@ margin: 0 0 25px;
 
 .contacto-card p {
 color: #555555;
-margin: 10px 0;
+margin: 12px 0;
 line-height: 1.6;
 }
 
@@ -1422,53 +1334,11 @@ color: #a51c2b;
 text-decoration: underline;
 }
 
-
 @media (max-width: 800px) {
-
-.contacto {
-width: 90%;
-padding: 20px 0 60px;
-}
 
 .contacto-grid {
 grid-template-columns: 1fr;
 gap: 20px;
 }
 
-.contacto-card {
-min-height: auto;
-}
-
-}
-
-/* =========================
-FONDO DE CONTACTO
-========================= */
-
-body:has(.titulo-contacto) {
-background-color: #f8f5f5;
-}
-
-.titulo-contacto {
-padding-bottom: 30px;
-}
-
-.titulo-contacto h1 {
-color: #5b1018;
-font-size: 42px;
-}
-
-.contacto-card {
-background-color: #ffffff;
-border: none;
-border-top: 4px solid #5b1018;
-box-shadow: 0 8px 25px rgba(91, 16, 24, 0.10);
-}
-
-.contacto-card h2 {
-color: #5b1018;
-}
-
-.contacto-card p {
-color: #555555;
 }
