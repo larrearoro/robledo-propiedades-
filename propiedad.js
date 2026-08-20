@@ -83,7 +83,8 @@ Number(propiedad.longitud)
 <strong>${propiedad.titulo}</strong><br>
 US$ ${propiedad.precio}
 `)
- .openPopup();
+ .openPopup()
+ console.log("POPUP CREADO");
 const descripcion = document.querySelector(".descripcion-propiedad");
 
 descripcion.querySelector("p").textContent =
