@@ -10,10 +10,46 @@ const dormitorios = filtros.dormitorios || "";
 const banos = filtros.banos || "";
 const cochera = filtros.cochera || "";
 
-const { data, error } = await supabaseClient
+let consulta = supabaseClient
 .from("propiedades")
 .select("*")
 .order("created_at", { ascending: false });
+
+if (operacion && operacion !== "Comprar o alquilar") {
+consulta = consulta.eq("operacion", operacion);
+}
+
+if (tipo && tipo !== "Todos") {
+consulta = consulta.eq("tipo", tipo);
+}
+
+if (ubicacion) {
+consulta = consulta.ilike("ubicacion", `%${ubicacion}%`);
+}
+
+if (precioMinimo) {
+consulta = consulta.gte("precio", Number(precioMinimo));
+}
+
+if (precioMaximo) {
+consulta = consulta.lte("precio", Number(precioMaximo));
+}
+
+if (dormitorios && dormitorios !== "Cualquier cantidad") {
+const cantidad = Number(dormitorios.replace("+", ""));
+consulta = consulta.gte("dormitorios", cantidad);
+}
+
+if (banos && banos !== "Cualquier cantidad") {
+const cantidad = Number(banos.replace("+", ""));
+consulta = consulta.gte("banos", cantidad);
+}
+
+if (cochera && cochera !== "Indistinto") {
+consulta = consulta.eq("cochera", cochera === "Sí");
+}
+
+const { data, error } = await consulta;
 
 if (error) {
 console.error("Error al cargar propiedades:", error);
