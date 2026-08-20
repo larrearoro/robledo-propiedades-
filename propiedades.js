@@ -111,6 +111,17 @@ tipo: parametros.get("tipo") || "",
 ubicacion: parametros.get("ubicacion") || "",
 precioMaximo: parametros.get("precioMaximo") || ""
 };
+document.getElementById("operacion").value =
+filtrosIniciales.operacion || "Comprar o alquilar";
+
+document.getElementById("tipo-propiedad").value =
+filtrosIniciales.tipo || "Todos";
+
+document.getElementById("ubicacion-propiedad").value =
+filtrosIniciales.ubicacion;
+
+document.getElementById("precio-maximo").value =
+filtrosIniciales.precioMaximo;
 
 if (
 filtrosIniciales.operacion ||
