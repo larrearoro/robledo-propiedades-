@@ -103,7 +103,25 @@ Ver propiedad
 });
 }
 
+const parametros = new URLSearchParams(window.location.search);
+
+const filtrosIniciales = {
+operacion: parametros.get("operacion") || "",
+tipo: parametros.get("tipo") || "",
+ubicacion: parametros.get("ubicacion") || "",
+precioMaximo: parametros.get("precioMaximo") || ""
+};
+
+if (
+filtrosIniciales.operacion ||
+filtrosIniciales.tipo ||
+filtrosIniciales.ubicacion ||
+filtrosIniciales.precioMaximo
+) {
+cargarPropiedades(filtrosIniciales);
+} else {
 cargarPropiedades();
+}
 
 document.getElementById("btn-buscar").addEventListener("click", function () {
 
