@@ -1,4 +1,4 @@
-async function cargarPropiedades() {
+async function cargarPropiedades(filtros = {}) {
 const container = document.getElementById("propiedades-container");
 
 const { data, error } = await supabaseClient
