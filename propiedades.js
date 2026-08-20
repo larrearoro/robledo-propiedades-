@@ -1,6 +1,15 @@
 async function cargarPropiedades(filtros = {}) {
 const container = document.getElementById("propiedades-container");
 
+  const operacion = filtros.operacion || "";
+const tipo = filtros.tipo || "";
+const ubicacion = filtros.ubicacion || "";
+const precioMinimo = filtros.precioMinimo || "";
+const precioMaximo = filtros.precioMaximo || "";
+const dormitorios = filtros.dormitorios || "";
+const banos = filtros.banos || "";
+const cochera = filtros.cochera || "";
+
 const { data, error } = await supabaseClient
 .from("propiedades")
 .select("*")
