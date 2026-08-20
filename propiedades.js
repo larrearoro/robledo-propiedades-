@@ -104,3 +104,19 @@ Ver propiedad
 }
 
 cargarPropiedades();
+
+document.getElementById("btn-buscar").addEventListener("click", function () {
+
+const filtros = {
+operacion: document.getElementById("operacion").value,
+tipo: document.getElementById("tipo-propiedad").value,
+ubicacion: document.getElementById("ubicacion-propiedad").value.trim(),
+precioMinimo: document.getElementById("precio-minimo").value,
+precioMaximo: document.getElementById("precio-maximo").value,
+dormitorios: document.getElementById("dormitorios").value,
+banos: document.getElementById("banos").value,
+cochera: document.getElementById("cochera").value
+};
+
+cargarPropiedades(filtros);
+});
