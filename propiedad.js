@@ -44,6 +44,9 @@ propiedad.superficie + " m²";
 
 caracteristicas[3].querySelector("strong").textContent =
 propiedad.cochera ? "Sí" : "No";
+ 
+ caracteristicas[4].querySelector("strong").textContent =
+propiedad.apta_banco ? "Sí" : "No";
 
 const fotoPrincipal =
 document.querySelector(".foto-principal");
