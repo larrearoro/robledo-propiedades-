@@ -90,6 +90,8 @@ window.location.href = `propiedades.html?${parametros.toString()}`;
 // TARJETA FLOTANTE - CERRAR Y MINIMIZAR
 // ========================================
 
+document.addEventListener("DOMContentLoaded", function () {
+
 const captacion = document.getElementById("captacion-flotante");
 const cerrarCaptacion = document.getElementById("cerrar-captacion");
 const captacionMinimizada = document.getElementById("captacion-minimizada");
@@ -102,4 +104,6 @@ captacionMinimizada.style.display = "block";
 captacionMinimizada.addEventListener("click", function () {
 captacion.style.display = "block";
 captacionMinimizada.style.display = "none";
+});
+
 });
