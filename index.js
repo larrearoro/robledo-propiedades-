@@ -111,19 +111,6 @@ captacionMinimizada.style.bottom = "auto";
 captacionMinimizada.style.display = "block";
 });
   
-let minimizadaFueMovida = false;
-
-captacionMinimizada.addEventListener("click", function () {
-
-if (minimizadaFueMovida) {
-minimizadaFueMovida = false;
-return;
-}
-
-captacion.style.display = "block";
-captacionMinimizada.style.display = "none";
-});
-
 });
 
 // ========================================
@@ -194,7 +181,7 @@ moviendoCaptacion = false;
 });
 
 // ========================================
-// BOTÓN MINIMIZADO - ARRASTRAR
+// BOTÓN MINIMIZADO - MOVER Y ABRIR
 // ========================================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -202,19 +189,30 @@ document.addEventListener("DOMContentLoaded", function () {
 const botonMinimizado =
 document.getElementById("captacion-minimizada");
 
-let moviendoMinimizado = false;
-let offsetXMin = 0;
-let offsetYMin = 0;
-let minimizadaFueMovida = false;
+const captacion =
+document.getElementById("captacion-flotante");
+
+let arrastrando = false;
+let seMovio = false;
+
+let inicioX = 0;
+let inicioY = 0;
+
+let offsetX = 0;
+let offsetY = 0;
 
 botonMinimizado.addEventListener("pointerdown", function (e) {
 
-moviendoMinimizado = true;
+arrastrando = true;
+seMovio = false;
+
+inicioX = e.clientX;
+inicioY = e.clientY;
 
 const rect = botonMinimizado.getBoundingClientRect();
 
-offsetXMin = e.clientX - rect.left;
-offsetYMin = e.clientY - rect.top;
+offsetX = e.clientX - rect.left;
+offsetY = e.clientY - rect.top;
 
 botonMinimizado.style.left = rect.left + "px";
 botonMinimizado.style.top = rect.top + "px";
@@ -226,12 +224,19 @@ botonMinimizado.setPointerCapture(e.pointerId);
 
 botonMinimizado.addEventListener("pointermove", function (e) {
 
-if (!moviendoMinimizado) return;
+if (!arrastrando) return;
 
-  minimizadaFueMovida = true;
+const distanciaX = Math.abs(e.clientX - inicioX);
+const distanciaY = Math.abs(e.clientY - inicioY);
 
-let nuevaX = e.clientX - offsetXMin;
-let nuevaY = e.clientY - offsetYMin;
+if (distanciaX > 5 || distanciaY > 5) {
+seMovio = true;
+}
+
+if (!seMovio) return;
+
+let nuevaX = e.clientX - offsetX;
+let nuevaY = e.clientY - offsetY;
 
 const maxX =
 window.innerWidth - botonMinimizado.offsetWidth;
@@ -247,11 +252,19 @@ botonMinimizado.style.top = nuevaY + "px";
 });
 
 botonMinimizado.addEventListener("pointerup", function () {
-moviendoMinimizado = false;
+
+if (!arrastrando) return;
+
+arrastrando = false;
+
+if (!seMovio) {
+captacion.style.display = "block";
+botonMinimizado.style.display = "none";
+}
 });
 
 botonMinimizado.addEventListener("pointercancel", function () {
-moviendoMinimizado = false;
+arrastrando = false;
 });
 
 });
