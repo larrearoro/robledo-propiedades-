@@ -97,10 +97,20 @@ const cerrarCaptacion = document.getElementById("cerrar-captacion");
 const captacionMinimizada = document.getElementById("captacion-minimizada");
 
 cerrarCaptacion.addEventListener("click", function () {
+
+const rect = captacion.getBoundingClientRect();
+
 captacion.style.display = "none";
+
+captacionMinimizada.style.position = "fixed";
+captacionMinimizada.style.left = rect.left + "px";
+captacionMinimizada.style.top = rect.top + "px";
+captacionMinimizada.style.right = "auto";
+captacionMinimizada.style.bottom = "auto";
+
 captacionMinimizada.style.display = "block";
 });
-
+  
 captacionMinimizada.addEventListener("click", function () {
 captacion.style.display = "block";
 captacionMinimizada.style.display = "none";
