@@ -1612,3 +1612,83 @@ gap: 20px;
   }
 
 }
+
+/* IMPACTO VISUAL - ENCABEZADO NOSOTROS */
+
+.pagina-nosotros .titulo-nosotros {
+  background-color: #5b1018;
+  padding: 95px 20px 100px;
+  text-align: center;
+}
+
+.pagina-nosotros .titulo-nosotros h1 {
+  color: #ffffff;
+  font-size: 58px;
+  font-weight: 500;
+  margin: 0 0 22px;
+  letter-spacing: 1px;
+}
+
+.pagina-nosotros .titulo-nosotros p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 21px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pagina-nosotros .historia-nosotros {
+  background-color: #f8f6f6;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  padding: 100px 10%;
+  display: block;
+}
+
+.pagina-nosotros .texto-nosotros {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagina-nosotros .texto-nosotros h2 {
+  color: #5b1018;
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0 0 25px;
+}
+
+.pagina-nosotros .texto-nosotros p {
+  color: #5d5d5d;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+
+/* VERSIÓN CELULAR */
+
+@media (max-width: 800px) {
+
+  .pagina-nosotros .titulo-nosotros {
+    padding: 70px 20px 75px;
+  }
+
+  .pagina-nosotros .titulo-nosotros h1 {
+    font-size: 44px;
+  }
+
+  .pagina-nosotros .titulo-nosotros p {
+    font-size: 18px;
+  }
+
+  .pagina-nosotros .historia-nosotros {
+    padding: 70px 8%;
+  }
+
+  .pagina-nosotros .texto-nosotros h2 {
+    font-size: 32px;
+  }
+
+}
