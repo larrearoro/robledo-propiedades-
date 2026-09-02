@@ -1692,3 +1692,111 @@ gap: 20px;
   }
 
 }
+/* ========================================
+TARJETA FLOTANTE - OFRECER PROPIEDAD
+======================================== */
+
+.captacion-flotante {
+position: fixed;
+right: 25px;
+bottom: 25px;
+width: 320px;
+background-color: #5b1018;
+color: #ffffff;
+padding: 28px;
+border-radius: 16px;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+z-index: 9999;
+cursor: grab;
+}
+
+.captacion-flotante:active {
+cursor: grabbing;
+}
+
+.cerrar-captacion {
+position: absolute;
+top: 10px;
+right: 12px;
+border: none;
+background: none;
+color: #ffffff;
+font-size: 25px;
+line-height: 1;
+cursor: pointer;
+}
+
+.icono-captacion {
+font-size: 30px;
+margin-bottom: 12px;
+}
+
+.captacion-flotante h3 {
+font-size: 21px;
+line-height: 1.3;
+margin: 0 25px 12px 0;
+}
+
+.captacion-flotante p {
+font-size: 15px;
+line-height: 1.5;
+margin: 0 0 20px;
+color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-captacion {
+width: 100%;
+border: none;
+background-color: #ffffff;
+color: #5b1018;
+padding: 12px 15px;
+border-radius: 8px;
+font-size: 15px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn-captacion:hover {
+background-color: #f1eeee;
+}
+
+.captacion-minimizada {
+display: none;
+position: fixed;
+right: 20px;
+bottom: 20px;
+border: none;
+background-color: #5b1018;
+color: #ffffff;
+padding: 13px 18px;
+border-radius: 25px;
+font-size: 14px;
+font-weight: 600;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+cursor: pointer;
+z-index: 9999;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+.captacion-flotante {
+right: 15px;
+bottom: 15px;
+width: calc(100% - 30px);
+max-width: 330px;
+padding: 24px;
+}
+
+.captacion-flotante h3 {
+font-size: 19px;
+}
+
+.captacion-minimizada {
+right: 15px;
+bottom: 15px;
+}
+
+}
