@@ -1785,20 +1785,46 @@ z-index: 9999;
 @media (max-width: 600px) {
 
 .captacion-flotante {
-right: 15px;
-bottom: 15px;
-width: calc(100% - 30px);
-max-width: 330px;
-padding: 24px;
+right: 12px;
+bottom: 12px;
+width: calc(100% - 24px);
+max-width: 300px;
+padding: 18px;
+border-radius: 14px;
 }
 
 .captacion-flotante h3 {
-font-size: 19px;
+font-size: 17px;
+margin-bottom: 8px;
+}
+
+.captacion-flotante p {
+font-size: 13px;
+line-height: 1.4;
+margin-bottom: 14px;
+}
+
+.icono-captacion {
+font-size: 24px;
+margin-bottom: 8px;
+}
+
+.btn-captacion {
+padding: 10px 12px;
+font-size: 14px;
+}
+
+.cerrar-captacion {
+top: 8px;
+right: 10px;
+font-size: 23px;
 }
 
 .captacion-minimizada {
-right: 15px;
-bottom: 15px;
+right: 12px;
+bottom: 12px;
+padding: 11px 15px;
+font-size: 13px;
 }
 
 }
