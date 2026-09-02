@@ -184,3 +184,63 @@ moviendoCaptacion = false;
 });
 
 });
+
+// ========================================
+// BOTÓN MINIMIZADO - ARRASTRAR
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const botonMinimizado =
+document.getElementById("captacion-minimizada");
+
+let moviendoMinimizado = false;
+let offsetXMin = 0;
+let offsetYMin = 0;
+
+botonMinimizado.addEventListener("pointerdown", function (e) {
+
+moviendoMinimizado = true;
+
+const rect = botonMinimizado.getBoundingClientRect();
+
+offsetXMin = e.clientX - rect.left;
+offsetYMin = e.clientY - rect.top;
+
+botonMinimizado.style.left = rect.left + "px";
+botonMinimizado.style.top = rect.top + "px";
+botonMinimizado.style.right = "auto";
+botonMinimizado.style.bottom = "auto";
+
+botonMinimizado.setPointerCapture(e.pointerId);
+});
+
+botonMinimizado.addEventListener("pointermove", function (e) {
+
+if (!moviendoMinimizado) return;
+
+let nuevaX = e.clientX - offsetXMin;
+let nuevaY = e.clientY - offsetYMin;
+
+const maxX =
+window.innerWidth - botonMinimizado.offsetWidth;
+
+const maxY =
+window.innerHeight - botonMinimizado.offsetHeight;
+
+nuevaX = Math.max(0, Math.min(nuevaX, maxX));
+nuevaY = Math.max(0, Math.min(nuevaY, maxY));
+
+botonMinimizado.style.left = nuevaX + "px";
+botonMinimizado.style.top = nuevaY + "px";
+});
+
+botonMinimizado.addEventListener("pointerup", function () {
+moviendoMinimizado = false;
+});
+
+botonMinimizado.addEventListener("pointercancel", function () {
+moviendoMinimizado = false;
+});
+
+});
