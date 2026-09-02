@@ -203,6 +203,8 @@ let offsetY = 0;
 
 botonMinimizado.addEventListener("pointerdown", function (e) {
 
+e.preventDefault();
+
 arrastrando = true;
 seMovio = false;
 
