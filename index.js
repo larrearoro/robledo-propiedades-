@@ -107,3 +107,62 @@ captacionMinimizada.style.display = "none";
 });
 
 });
+
+// ========================================
+// TARJETA FLOTANTE - ARRASTRAR
+// ========================================
+
+const tarjetaCaptacion = document.getElementById("captacion-flotante");
+
+let moviendoCaptacion = false;
+let offsetX = 0;
+let offsetY = 0;
+
+tarjetaCaptacion.addEventListener("pointerdown", function (e) {
+
+if (
+e.target.closest(".cerrar-captacion") ||
+e.target.closest(".btn-captacion")
+) {
+return;
+}
+
+moviendoCaptacion = true;
+
+const rect = tarjetaCaptacion.getBoundingClientRect();
+
+offsetX = e.clientX - rect.left;
+offsetY = e.clientY - rect.top;
+
+tarjetaCaptacion.style.left = rect.left + "px";
+tarjetaCaptacion.style.top = rect.top + "px";
+tarjetaCaptacion.style.right = "auto";
+tarjetaCaptacion.style.bottom = "auto";
+
+tarjetaCaptacion.setPointerCapture(e.pointerId);
+});
+
+tarjetaCaptacion.addEventListener("pointermove", function (e) {
+
+if (!moviendoCaptacion) return;
+
+let nuevaX = e.clientX - offsetX;
+let nuevaY = e.clientY - offsetY;
+
+const maxX = window.innerWidth - tarjetaCaptacion.offsetWidth;
+const maxY = window.innerHeight - tarjetaCaptacion.offsetHeight;
+
+nuevaX = Math.max(0, Math.min(nuevaX, maxX));
+nuevaY = Math.max(0, Math.min(nuevaY, maxY));
+
+tarjetaCaptacion.style.left = nuevaX + "px";
+tarjetaCaptacion.style.top = nuevaY + "px";
+});
+
+tarjetaCaptacion.addEventListener("pointerup", function () {
+moviendoCaptacion = false;
+});
+
+tarjetaCaptacion.addEventListener("pointercancel", function () {
+moviendoCaptacion = false;
+});
