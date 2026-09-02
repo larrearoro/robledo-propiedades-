@@ -258,6 +258,14 @@ if (!arrastrando) return;
 arrastrando = false;
 
 if (!seMovio) {
+
+const rect = botonMinimizado.getBoundingClientRect();
+
+captacion.style.left = rect.left + "px";
+captacion.style.top = rect.top + "px";
+captacion.style.right = "auto";
+captacion.style.bottom = "auto";
+
 captacion.style.display = "block";
 botonMinimizado.style.display = "none";
 }
