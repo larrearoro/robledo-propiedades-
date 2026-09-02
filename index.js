@@ -276,3 +276,29 @@ arrastrando = false;
 });
 
 });
+
+// ========================================
+// FORMULARIO - ABRIR Y CERRAR
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const btnCaptacion =
+document.getElementById("btn-captacion");
+
+const modalCaptacion =
+document.getElementById("modal-captacion");
+
+const cerrarFormulario =
+document.getElementById("cerrar-formulario");
+
+btnCaptacion.addEventListener("click", function () {
+modalCaptacion.style.display = "block";
+});
+
+cerrarFormulario.addEventListener("click", function () {
+modalCaptacion.style.display = "none";
+});
+
+});
+
