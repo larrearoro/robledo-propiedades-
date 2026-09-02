@@ -111,7 +111,15 @@ captacionMinimizada.style.bottom = "auto";
 captacionMinimizada.style.display = "block";
 });
   
+let minimizadaFueMovida = false;
+
 captacionMinimizada.addEventListener("click", function () {
+
+if (minimizadaFueMovida) {
+minimizadaFueMovida = false;
+return;
+}
+
 captacion.style.display = "block";
 captacionMinimizada.style.display = "none";
 });
@@ -197,6 +205,7 @@ document.getElementById("captacion-minimizada");
 let moviendoMinimizado = false;
 let offsetXMin = 0;
 let offsetYMin = 0;
+let minimizadaFueMovida = false;
 
 botonMinimizado.addEventListener("pointerdown", function (e) {
 
@@ -218,6 +227,8 @@ botonMinimizado.setPointerCapture(e.pointerId);
 botonMinimizado.addEventListener("pointermove", function (e) {
 
 if (!moviendoMinimizado) return;
+
+  minimizadaFueMovida = true;
 
 let nuevaX = e.clientX - offsetXMin;
 let nuevaY = e.clientY - offsetYMin;
