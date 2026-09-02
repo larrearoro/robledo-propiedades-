@@ -85,3 +85,21 @@ parametros.set("precioMaximo", precio);
 
 window.location.href = `propiedades.html?${parametros.toString()}`;
 });
+
+// ========================================
+// TARJETA FLOTANTE - CERRAR Y MINIMIZAR
+// ========================================
+
+const captacion = document.getElementById("captacion-flotante");
+const cerrarCaptacion = document.getElementById("cerrar-captacion");
+const captacionMinimizada = document.getElementById("captacion-minimizada");
+
+cerrarCaptacion.addEventListener("click", function () {
+captacion.style.display = "none";
+captacionMinimizada.style.display = "block";
+});
+
+captacionMinimizada.addEventListener("click", function () {
+captacion.style.display = "block";
+captacionMinimizada.style.display = "none";
+});
