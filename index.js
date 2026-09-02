@@ -302,3 +302,91 @@ modalCaptacion.style.display = "none";
 
 });
 
+// ========================================
+// FORMULARIO - ENVIAR POR WHATSAPP
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const formulario =
+document.getElementById("formulario-propiedad");
+
+formulario.addEventListener("submit", function (e) {
+
+e.preventDefault();
+
+const operacion =
+document.getElementById("operacion-captacion").value;
+
+const tipo =
+document.getElementById("tipo-captacion").value;
+
+const ubicacion =
+document.getElementById("ubicacion-captacion").value;
+
+const dormitorios =
+document.getElementById("dormitorios-captacion").value;
+
+const banos =
+document.getElementById("banos-captacion").value;
+
+const superficie =
+document.getElementById("superficie-captacion").value;
+
+const precio =
+document.getElementById("precio-captacion").value;
+
+const cochera =
+document.getElementById("cochera-captacion").value;
+
+const aptaBanco =
+document.getElementById("banco-captacion").value;
+
+const nombre =
+document.getElementById("nombre-captacion").value;
+
+const whatsapp =
+document.getElementById("whatsapp-captacion").value;
+
+const comentarios =
+document.getElementById("comentarios-captacion").value;
+
+const mensaje = `
+🏠 *Nueva consulta de propiedad*
+
+*Sobre la propiedad:*
+
+Operación: ${operacion}
+Tipo: ${tipo}
+Ubicación: ${ubicacion}
+Dormitorios: ${dormitorios || "No especificado"}
+Baños: ${banos || "No especificado"}
+Superficie: ${superficie ? superficie + " m²" : "No especificada"}
+Precio pretendido: ${precio || "No especificado"}
+Cochera: ${cochera || "No especificado"}
+Apta banco: ${aptaBanco || "No sé"}
+
+*Datos de contacto:*
+
+Nombre y apellido: ${nombre}
+WhatsApp: ${whatsapp}
+
+*Comentarios:*
+
+${comentarios || "Sin comentarios"}
+`;
+
+const numero =
+"5492216244453";
+
+const url =
+"https://api.whatsapp.com/send?phone=" +
+numero +
+"&text=" +
+encodeURIComponent(mensaje);
+
+window.open(url, "_blank");
+
+});
+
+});
