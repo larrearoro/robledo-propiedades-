@@ -358,6 +358,236 @@ Ofrecer mi propiedad
 <button class="captacion-minimizada" id="captacion-minimizada">
 🏠 Ofrecer mi propiedad
 </button>
+
+  <!-- FORMULARIO - OFRECER PROPIEDAD -->
+
+<div class="modal-captacion" id="modal-captacion">
+
+<div class="formulario-captacion">
+
+<button class="cerrar-formulario" id="cerrar-formulario">
+×
+</button>
+
+<div class="encabezado-formulario">
+
+<span class="icono-formulario">🏠</span>
+
+<h2>Ofrecé tu propiedad</h2>
+
+<p>
+Contanos sobre tu propiedad y nos ponemos en contacto con vos.
+</p>
+
+</div>
+
+<form id="formulario-propiedad">
+
+<h3>Sobre la propiedad</h3>
+
+<div class="campo-formulario">
+
+<label for="operacion-captacion">
+¿Qué querés hacer?
+</label>
+
+<select id="operacion-captacion" required>
+<option value="">Seleccionar</option>
+<option value="Vender">Vender</option>
+<option value="Alquilar">Alquilar</option>
+</select>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="tipo-captacion">
+Tipo de propiedad
+</label>
+
+<select id="tipo-captacion" required>
+<option value="">Seleccionar</option>
+<option value="Casa">Casa</option>
+<option value="Departamento">Departamento</option>
+<option value="PH">PH</option>
+<option value="Terreno">Terreno</option>
+<option value="Local">Local</option>
+<option value="Oficina">Oficina</option>
+</select>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="ubicacion-captacion">
+Ubicación
+</label>
+
+<input
+type="text"
+id="ubicacion-captacion"
+placeholder="Ej. La Plata, barrio o dirección"
+required
+>
+
+</div>
+
+<div class="fila-formulario">
+
+<div class="campo-formulario">
+
+<label for="dormitorios-captacion">
+Dormitorios
+</label>
+
+<input
+type="number"
+id="dormitorios-captacion"
+min="0"
+placeholder="Ej. 3"
+>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="banos-captacion">
+Baños
+</label>
+
+<input
+type="number"
+id="banos-captacion"
+min="0"
+placeholder="Ej. 2"
+>
+
+</div>
+
+</div>
+
+<div class="fila-formulario">
+
+<div class="campo-formulario">
+
+<label for="superficie-captacion">
+Superficie aproximada
+</label>
+
+<input
+type="number"
+id="superficie-captacion"
+min="0"
+placeholder="m²"
+>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="precio-captacion">
+Precio pretendido
+</label>
+
+<input
+type="text"
+id="precio-captacion"
+placeholder="Ej. US$ 150.000"
+>
+
+</div>
+
+</div>
+
+<div class="fila-formulario">
+
+<div class="campo-formulario">
+
+<label for="cochera-captacion">
+¿Tiene cochera?
+</label>
+
+<select id="cochera-captacion">
+<option value="">Seleccionar</option>
+<option value="Sí">Sí</option>
+<option value="No">No</option>
+</select>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="banco-captacion">
+¿Es apta banco?
+</label>
+
+<select id="banco-captacion">
+<option value="">No sé</option>
+<option value="Sí">Sí</option>
+<option value="No">No</option>
+</select>
+
+</div>
+
+</div>
+
+<h3>Tus datos</h3>
+
+<div class="campo-formulario">
+
+<label for="nombre-captacion">
+Nombre y apellido
+</label>
+
+<input
+type="text"
+id="nombre-captacion"
+required
+>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="whatsapp-captacion">
+WhatsApp
+</label>
+
+<input
+type="tel"
+id="whatsapp-captacion"
+placeholder="Ej. 221 555 5555"
+required
+>
+
+</div>
+
+<div class="campo-formulario">
+
+<label for="comentarios-captacion">
+Contanos un poco más sobre tu propiedad
+</label>
+
+<textarea
+id="comentarios-captacion"
+rows="4"
+placeholder="Podés agregar cualquier detalle que consideres importante."
+></textarea>
+
+</div>
+
+<button
+type="submit"
+class="btn-enviar-whatsapp"
+>
+Enviar por WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
   
 </body>
 
