@@ -1802,3 +1802,178 @@ bottom: 15px;
 }
 
 }
+
+/* ========================================
+FORMULARIO - OFRECER PROPIEDAD
+======================================== */
+
+.modal-captacion {
+display: none;
+position: fixed;
+inset: 0;
+background-color: rgba(0, 0, 0, 0.45);
+z-index: 10000;
+overflow-y: auto;
+padding: 30px 20px;
+}
+
+.formulario-captacion {
+position: relative;
+width: 100%;
+max-width: 650px;
+margin: 20px auto;
+background-color: #ffffff;
+border: 2px solid #5b1018;
+border-radius: 18px;
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+overflow: hidden;
+}
+
+.cerrar-formulario {
+position: absolute;
+top: 18px;
+right: 20px;
+border: none;
+background: none;
+color: #ffffff;
+font-size: 30px;
+line-height: 1;
+cursor: pointer;
+z-index: 2;
+}
+
+.encabezado-formulario {
+background-color: #5b1018;
+color: #ffffff;
+text-align: center;
+padding: 35px 45px 30px;
+}
+
+.icono-formulario {
+display: block;
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+.encabezado-formulario h2 {
+margin: 0 35px 10px;
+font-size: 30px;
+font-weight: 500;
+}
+
+.encabezado-formulario p {
+margin: 0 auto;
+max-width: 480px;
+font-size: 16px;
+line-height: 1.5;
+color: rgba(255, 255, 255, 0.9);
+}
+
+#formulario-propiedad {
+padding: 35px 40px 40px;
+}
+
+#formulario-propiedad h3 {
+color: #5b1018;
+font-size: 20px;
+margin: 0 0 20px;
+padding-bottom: 10px;
+border-bottom: 1px solid #e5dede;
+}
+
+.campo-formulario {
+display: flex;
+flex-direction: column;
+gap: 7px;
+margin-bottom: 18px;
+}
+
+.campo-formulario label {
+color: #5b1018;
+font-size: 14px;
+font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+width: 100%;
+box-sizing: border-box;
+border: 1px solid #d8cdcd;
+border-radius: 8px;
+padding: 12px 13px;
+font-family: inherit;
+font-size: 15px;
+color: #444444;
+background-color: #ffffff;
+outline: none;
+transition: 0.2s;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+border-color: #5b1018;
+box-shadow: 0 0 0 2px rgba(91, 16, 24, 0.08);
+}
+
+.campo-formulario textarea {
+resize: vertical;
+min-height: 100px;
+}
+
+.fila-formulario {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.btn-enviar-whatsapp {
+width: 100%;
+border: none;
+border-radius: 9px;
+background-color: #5b1018;
+color: #ffffff;
+padding: 14px 20px;
+margin-top: 10px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn-enviar-whatsapp:hover {
+background-color: #a51c2b;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+.modal-captacion {
+padding: 15px 10px;
+}
+
+.formulario-captacion {
+margin: 10px auto;
+border-radius: 14px;
+}
+
+.encabezado-formulario {
+padding: 30px 25px 25px;
+}
+
+.encabezado-formulario h2 {
+font-size: 25px;
+}
+
+#formulario-propiedad {
+padding: 28px 22px 30px;
+}
+
+.fila-formulario {
+grid-template-columns: 1fr;
+gap: 0;
+}
+
+}
