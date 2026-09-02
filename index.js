@@ -112,7 +112,10 @@ captacionMinimizada.style.display = "none";
 // TARJETA FLOTANTE - ARRASTRAR
 // ========================================
 
-const tarjetaCaptacion = document.getElementById("captacion-flotante");
+document.addEventListener("DOMContentLoaded", function () {
+
+const tarjetaCaptacion =
+document.getElementById("captacion-flotante");
 
 let moviendoCaptacion = false;
 let offsetX = 0;
@@ -149,8 +152,11 @@ if (!moviendoCaptacion) return;
 let nuevaX = e.clientX - offsetX;
 let nuevaY = e.clientY - offsetY;
 
-const maxX = window.innerWidth - tarjetaCaptacion.offsetWidth;
-const maxY = window.innerHeight - tarjetaCaptacion.offsetHeight;
+const maxX =
+window.innerWidth - tarjetaCaptacion.offsetWidth;
+
+const maxY =
+window.innerHeight - tarjetaCaptacion.offsetHeight;
 
 nuevaX = Math.max(0, Math.min(nuevaX, maxX));
 nuevaY = Math.max(0, Math.min(nuevaY, maxY));
@@ -165,4 +171,6 @@ moviendoCaptacion = false;
 
 tarjetaCaptacion.addEventListener("pointercancel", function () {
 moviendoCaptacion = false;
+});
+
 });
