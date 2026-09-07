@@ -65,7 +65,7 @@ container.innerHTML += `
 <article class="propiedad-card">
 
 <div class="imagen-propiedad">
-<img src="${propiedad.image_url}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url).trim()}" alt="${propiedad.titulo}">
 </div>
 
 <div class="contenido-propiedad">
