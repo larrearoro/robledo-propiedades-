@@ -61,6 +61,7 @@ container.innerHTML = "";
 data.forEach(function (propiedad) {
   console.log("PROPIEDAD:", propiedad);
   console.log("FOTO:", propiedad.image_url);
+  console.log("URL EXACTA DE FOTO:", JSON.stringify(propiedad.image_url));
 container.innerHTML += `
 <article class="propiedad-card">
 
