@@ -66,7 +66,7 @@ container.innerHTML += `
 <article class="propiedad-card">
 
 <div class="imagen-propiedad">
-<img src="https://hkqxtatgwfqdqqwankxw.supabase.co/storage/v1/object/public/propiedades/3bis%20e/ab92ffd4-9767-4dea-aea3-506d8010d0c1.jpeg" alt="Prueba">
+<img src="${String(propiedad.image_url).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
 </div>
 
 <div class="contenido-propiedad">
