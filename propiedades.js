@@ -88,10 +88,7 @@ ${propiedad.titulo}
 <p class="precio">
 ${
   propiedad.operacion === "Venta y Alquiler"
-    ? `
-      Venta: ${propiedad.moneda_venta === "USD" ? "US$" : "$"} ${Number(propiedad.precio_venta).toLocaleString("es-AR")}<br>
-      Alquiler: ${propiedad.moneda_alquiler === "USD" ? "US$" : "$"} ${Number(propiedad.precio_alquiler).toLocaleString("es-AR")}
-    `
+    ? `${propiedad.moneda_venta === "USD" ? "US$" : "$"} ${Number(propiedad.precio_venta).toLocaleString("es-AR")}`
     : `${propiedad.moneda === "USD" ? "US$" : "$"} ${Number(propiedad.precio).toLocaleString("es-AR")}`
 }
 </p>
