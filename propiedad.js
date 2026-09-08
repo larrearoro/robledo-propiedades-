@@ -24,8 +24,22 @@ console.log("PROPIEDAD:", propiedad);
 document.querySelector(".info-propiedad h1").textContent =
 propiedad["titulo"];
 
-document.querySelector(".precio").textContent =
-"US$ " + propiedad.precio;
+const precio = document.querySelector(".precio");
+
+if (propiedad.operacion === "Venta y Alquiler") {
+  precio.innerHTML =
+    "Venta: " +
+    (propiedad.moneda_venta === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio_venta).toLocaleString("es-AR") +
+    "<br>" +
+    "Alquiler: " +
+    (propiedad.moneda_alquiler === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio_alquiler).toLocaleString("es-AR");
+} else {
+  precio.textContent =
+    (propiedad.moneda === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio).toLocaleString("es-AR");
+}
 
 document.querySelector(".ubicacion").textContent =
 "📍 " + propiedad.ubicacion;
@@ -85,7 +99,18 @@ Number(propiedad.longitud)
 .addTo(mapa)
 .bindPopup(
   "<strong>" + propiedad.titulo + "</strong><br>" +
-  "US$ " + propiedad.precio
+  (
+    propiedad.operacion === "Venta y Alquiler"
+      ? "Venta: " +
+        (propiedad.moneda_venta === "USD" ? "US$ " : "$ ") +
+        Number(propiedad.precio_venta).toLocaleString("es-AR") +
+        "<br>" +
+        "Alquiler: " +
+        (propiedad.moneda_alquiler === "USD" ? "US$ " : "$ ") +
+        Number(propiedad.precio_alquiler).toLocaleString("es-AR")
+      : (propiedad.moneda === "USD" ? "US$ " : "$ ") +
+        Number(propiedad.precio).toLocaleString("es-AR")
+  )
 );
 const descripcion = document.querySelector(".descripcion-propiedad");
 
