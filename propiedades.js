@@ -16,7 +16,9 @@ let consulta = supabaseClient
 .order("created_at", { ascending: false });
 
 if (operacion && operacion !== "Comprar o alquilar") {
-consulta = consulta.eq("operacion", operacion);
+  consulta = consulta.or(
+    `operacion.eq.${operacion},operacion.eq.Venta y Alquiler`
+  );
 }
 
 if (tipo && tipo !== "Todos") {
