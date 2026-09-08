@@ -22,7 +22,7 @@ return;
 console.log("PROPIEDAD:", propiedad);
 
 document.querySelector(".info-propiedad .tipo").textContent =
-propiedad.operacion;
+propiedad.operacion.toUpperCase();
 
 document.querySelector(".info-propiedad h1").textContent =
 propiedad["titulo"];
