@@ -52,21 +52,21 @@ const fotoPrincipal =
 document.querySelector(".foto-principal");
 
 fotoPrincipal.innerHTML = `
-<img src="${String(propiedad. image_url).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
 `;
 const fotosSecundarias =
 document.querySelectorAll(".fotos-secundarias div");
 
 fotosSecundarias[0].innerHTML = `
-<img src="${String(propiedad.image_url_2).trim()trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_2).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
 `;
 
 fotosSecundarias[1].innerHTML = `
-<img src="${String(propiedad.image_url_3).trim()trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_3).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
 `;
 
 fotosSecundarias[2].innerHTML = `
-<img src="${String(propiedad.image_url_4).trim()trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_4).trim().replace(/\$0$/, '')}" alt="${propiedad.titulo}">
 `;
  const mapa = L.map("mapa").setView(
 [Number(propiedad.latitud), Number(propiedad.longitud)],
