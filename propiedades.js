@@ -86,7 +86,14 @@ ${propiedad.titulo}
 </p>
 
 <p class="precio">
-US$ ${Number(propiedad.precio).toLocaleString("es-AR")}
+${
+  propiedad.operacion === "Venta y Alquiler"
+    ? `
+      Venta: US$ ${Number(propiedad.precio_venta).toLocaleString("es-AR")}<br>
+      Alquiler: $ ${Number(propiedad.precio_alquiler).toLocaleString("es-AR")}
+    `
+    : `US$ ${Number(propiedad.precio).toLocaleString("es-AR")}`
+}
 </p>
 
 <p>
