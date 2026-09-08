@@ -52,21 +52,21 @@ const fotoPrincipal =
 document.querySelector(".foto-principal");
 
 fotoPrincipal.innerHTML = `
-<img src="${propiedad.image_url}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url).trim()}" alt="${propiedad.titulo}">
 `;
 const fotosSecundarias =
 document.querySelectorAll(".fotos-secundarias div");
 
 fotosSecundarias[0].innerHTML = `
-<img src="${propiedad.image_url_2}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_2).trim()}" alt="${propiedad.titulo}">
 `;
 
 fotosSecundarias[1].innerHTML = `
-<img src="${propiedad.image_url_3}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_3).trim()}" alt="${propiedad.titulo}">
 `;
 
 fotosSecundarias[2].innerHTML = `
-<img src="${propiedad.image_url_4}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url_4).trim()}" alt="${propiedad.titulo}">
 `;
  const mapa = L.map("mapa").setView(
 [Number(propiedad.latitud), Number(propiedad.longitud)],
