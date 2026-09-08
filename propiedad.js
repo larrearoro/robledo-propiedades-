@@ -82,10 +82,10 @@ Number(propiedad.latitud),
 Number(propiedad.longitud)
 ])
 .addTo(mapa)
-.bindPopup(`
-<strong>${propiedad.titulo}</strong><br>
-US$ ${propiedad.precio}
-`);
+.bindPopup(
+  "<strong>" + propiedad.titulo + "</strong><br>" +
+  "US$ " + propiedad.precio
+);
 const descripcion = document.querySelector(".descripcion-propiedad");
 
 descripcion.querySelector("p").textContent =
