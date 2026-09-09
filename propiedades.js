@@ -22,7 +22,7 @@ if (operacion && operacion !== "Comprar o alquilar") {
 }
 
 if (tipo && tipo !== "Todos") {
-consulta = consulta.eq("tipo", tipo);
+consulta = consulta.ilike("tipo", `%${tipo}%`);
 }
 
 if (ubicacion) {
