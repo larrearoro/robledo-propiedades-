@@ -65,6 +65,9 @@ propiedad.cochera ? "Sí" : "No";
  caracteristicas[4].querySelector("strong").textContent =
 propiedad.apta_banco ? "Sí" : "No";
 
+caracteristicas[5].querySelector("strong").textContent =
+propiedad.expensas ? "Sí" : "No";
+
 const fotoPrincipal =
 document.querySelector(".foto-principal");
 
