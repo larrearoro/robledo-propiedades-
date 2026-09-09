@@ -16,11 +16,24 @@ return;
 container.innerHTML = "";
 
 data.forEach(function (propiedad) {
+
+const precio =
+propiedad.operacion === "Venta y Alquiler"
+  ? "Venta: " +
+    (propiedad.moneda_venta === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio_venta).toLocaleString("es-AR") +
+    "<br>" +
+    "Alquiler: " +
+    (propiedad.moneda_alquiler === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio_alquiler).toLocaleString("es-AR")
+  : (propiedad.moneda === "USD" ? "US$ " : "$ ") +
+    Number(propiedad.precio).toLocaleString("es-AR");
+
 container.innerHTML += `
 <article class="propiedad-card">
 
 <div class="imagen-propiedad">
-<img src="${propiedad.image_url}" alt="${propiedad.titulo}">
+<img src="${String(propiedad.image_url).trim().replace("$0", "")}" alt="${propiedad.titulo}">
 </div>
 
 <h3>
@@ -32,7 +45,7 @@ ${propiedad.ubicacion}
 </p>
 
 <p class="precio">
-US$ ${Number(propiedad.precio).toLocaleString("es-AR")}
+${precio}
 </p>
 
 <a
