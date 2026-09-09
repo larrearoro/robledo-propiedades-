@@ -22,6 +22,7 @@ if (operacion && operacion !== "Comprar o alquilar") {
 }
 
 if (tipo && tipo !== "Todos") {
+console.log("TIPO ELEGIDO:", tipo);
 consulta = consulta.ilike("tipo", `%${tipo}%`);
 }
 
