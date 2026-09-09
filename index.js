@@ -27,8 +27,7 @@ container.innerHTML += `
 <article class="propiedad-card">
 
 <div class="imagen-propiedad">
-<img src="${String(propiedad.image_url).trim().replace("$0", "")}" alt="${propiedad.titulo}">
-</div>
+<img src="${String(propiedad.image_portada).trim().replace("$0", "")}" alt="${propiedad.titulo}">
 
 <h3>
 ${propiedad.titulo}
