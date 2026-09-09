@@ -28,6 +28,7 @@ container.innerHTML += `
 
 <div class="imagen-propiedad">
 <img src="${String(propiedad.image_url).trim().replace("$0", "")}" alt="${propiedad.titulo}">
+</div>
 
 <h3>
 ${propiedad.titulo}
